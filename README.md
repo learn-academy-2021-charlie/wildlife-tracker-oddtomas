@@ -49,7 +49,7 @@ Remember to add the start_date and end_date to what is permitted in your strong 
 
 
 
-
+***CURRENTLY ON STRETCH CHALLENGES
 Stretch Challenges
 Note: All of these stories should include the proper RSpec tests. Validations will require specs in spec/models, and the controller method will require specs in spec/requests.
 
