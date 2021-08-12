@@ -8,6 +8,7 @@ class AnimalsController < ApplicationController
     def show
         animal = Animal.find(params[:id])
         sighting = animal.as_json(include: :sightings)  #shows animal and the  sighting , as_json , include #associated table item.
+        # sighting = animal include:sightings
         render json: sighting
 
     end
