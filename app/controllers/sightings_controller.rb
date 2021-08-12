@@ -1,17 +1,15 @@
 class SightingsController < ApplicationController
 
-        def index
-            sightings = Sighting.all
-            render json: sightings
-            end
+        # def index
+        #     sightings = Sighting.all
+        #     render json: sightings
+        #     end
 
-
-                def index
+#use postman to search by params of start and end date. 
+                def index 
                   sightings = Sighting.where(date: params[:start_date]..params[:end_date])
                   render json: sightings
                 end
-              end
-
 
 
               
@@ -51,7 +49,7 @@ class SightingsController < ApplicationController
         
         private
             def sighting_param
-                params.require(:sighting).permit(:date, :latitude, :longitude)
+                params.require(:sighting).permit(:date, :latitude, :longitude, :start_date, :end_date)
             end
     
     
